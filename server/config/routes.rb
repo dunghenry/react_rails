@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
+  get '/todos', action: :getTodos, controller: :todos
+  post '/todos', action: :addTodo, controller: :todos
+  put '/todos/:id', action: :updateTodo, controller: :todos
+  delete '/todos/:id', action: :deleteTodo, controller: :todos
+  get '/todos/:id', action: :showTodo, controller: :todos
   # root "articles#index"
 end
